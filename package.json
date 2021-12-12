@@ -1,6 +1,6 @@
 {
   "name": "micanssbotWEB",
-  "version": "1.3",
+  "version": "1.3.0",
   "description": "project by viko, sebuah simulasi chat AI bot untuk para orang gabut",
   "main": "run.js",
   "scripts": {
