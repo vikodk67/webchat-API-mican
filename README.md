@@ -22,7 +22,7 @@ kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu upda
 |       #play     | menyetel lagu di webnya anda tinggal ketik #play tanpa tambahan lainnya                      |
 |       #tiktok   | mengdonlot video sumber dari tiktok anda tinggal ketik #tiktok tanpa tambahan lainnya        |
 |       #cerpen   | menceritakan kisah dongeng cerpen jomblo bucin, horor, mesum, mesra, ceria, menyedihkan, dll | 
-|       #vn   |mengkonversi micropone ke teks pesan akan disampaikan | 
+|       tombol vn   |mengkonversi micropone ke teks pesan akan disampaikan | 
 
 <img src="Capture.JPG" width="800" height="600"></img>
 
