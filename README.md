@@ -18,3 +18,8 @@ aplikasi berbasis web dilengkapi AI intelegent nembak simsimi
 |       #cerpen   | menceritakan kisah dongeng cerpen jomblo bucin, horor, mesum, mesra, ceria, menyedihkan, dll | 
 
 silahkan tambahkan fitur sendiri, capek saya:)
+## APIKEY REKOMENDASI
+- [VHTEAR](https://api.vhtear.com)
+- [VIKO-API](https://viko-api.herokuapp.com/)
+- [VIKOAPI-INDEX](https://tobz-api.herokuapp.com/)
+- [ZEKS API](https://zeks.xyz/)
