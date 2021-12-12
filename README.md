@@ -4,7 +4,7 @@
 <p align="left">
 <img src="http://studiovdk.herokuapp.com/api/tentang/images/vhekr.gif" alt="GIF" width="128" height="128"/>
 </p>
-aplikasi berbasis web dilengkapi AI intelegent nembak simsimi
+aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajadhsm
 
 <strong>Instalasinya</strong>
 ```bash
@@ -27,8 +27,9 @@ silahkan tambahkan fitur sendiri, capek saya:)
 - [VIKO-API](https://viko-api.herokuapp.com/)
 - [VIKOAPI-INDEX](https://vikoapi-index.herokuapp.com/)
 - [ZEKS API](https://zeks.xyz/)
--
-## 🙏 Thanks To
 
+## 🙏 Thanks To
+* [`Sajadhsm`](https://github.com/sajadhsm) 
 * [`Vinz`](https://github.com/myvinz) 
-* [`ArugaZ`](https://github.com/ArugaZ/whatsapp-bot) 
+* [`ArugaZ`](https://github.com/ArugaZ/)
+* Dan lainnya
