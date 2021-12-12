@@ -6,7 +6,9 @@
 </p>
 aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajadhsm
 kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu update terbaru
-<strong>Instalasinya</strong>
+
+## Instalasinya
+
 ```bash
 > cd webchat-api-mican
 > git clone https://github.com/vikodk67/webchat-API-mican.git
