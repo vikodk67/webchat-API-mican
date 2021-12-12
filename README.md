@@ -25,5 +25,5 @@ silahkan tambahkan fitur sendiri, capek saya:)
 ## APIKEY REKOMENDASI
 - [VHTEAR](https://api.vhtear.com)
 - [VIKO-API](https://viko-api.herokuapp.com/)
-- [VIKOAPI-INDEX](https://tobz-api.herokuapp.com/)
+- [VIKOAPI-INDEX](https://vikoapi-index.herokuapp.com/)
 - [ZEKS API](https://zeks.xyz/)
