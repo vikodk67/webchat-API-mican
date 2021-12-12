@@ -2,9 +2,11 @@
 <p>Versi beta</p><br>
 aplikasi berbasis web dilengkapi AI intelegent nembak simsimi
 
-Instalasi pemasangan
+<strong>Instalasinya</strong>
 ```bash
 > cd webchat-api-mican
 > git clone https://github.com/vikodk67/webchat-API-mican.git
+> npm install
+> node run
 ```
 
