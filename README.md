@@ -3,6 +3,5 @@
 aplikasi berbasis web dilengkapi AI intelegent nembak simsimi
 <h5>Instalasi pemasangan</h5>
 ```bash
-
-git clone 
+git clone https://github.com/vikodk67/webchat-API-mican.git
 ```
