@@ -1,11 +1,11 @@
 <h2>webchat-API-mican</h2>
-<p>Versi beta 1.3</p><br>
+<p>Versi beta 1.3.0</p><br>
 
 <p align="left">
-<img src="http://studiovdk.herokuapp.com/api/tentang/images/vhekr.gif" alt="GIF" width="128" height="128"/>
+<img src="http://studiovdk.herokuapp.com/api/tentang/images/vhekr.gif" alt="GIF" width="170" height="170"/>
 </p>
 aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajadhsm
-
+kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu update terbaru
 <strong>Instalasinya</strong>
 ```bash
 > cd webchat-api-mican
@@ -25,6 +25,7 @@ aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajad
 <img src="Capture.JPG" width="800" height="600"></img>
 
 silahkan tambahkan fitur sendiri, capek saya:)
+
 ## APIKEY REKOMENDASI
 - [VHTEAR](https://api.vhtear.com)
 - [VIKO-API](https://viko-api.herokuapp.com/)
