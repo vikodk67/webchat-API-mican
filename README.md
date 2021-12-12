@@ -27,3 +27,8 @@ silahkan tambahkan fitur sendiri, capek saya:)
 - [VIKO-API](https://viko-api.herokuapp.com/)
 - [VIKOAPI-INDEX](https://vikoapi-index.herokuapp.com/)
 - [ZEKS API](https://zeks.xyz/)
+-
+## 🙏 Thanks To
+
+* [`Vinz`](https://github.com/myvinz) 
+* [`ArugaZ`](https://github.com/ArugaZ/whatsapp-bot) 
