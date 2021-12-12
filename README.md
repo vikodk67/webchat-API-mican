@@ -20,7 +20,8 @@ aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajad
 |       #play     | menyetel lagu di webnya anda tinggal ketik #play tanpa tambahan lainnya                      |
 |       #tiktok   | mengdonlot video sumber dari tiktok anda tinggal ketik #tiktok tanpa tambahan lainnya        |
 |       #cerpen   | menceritakan kisah dongeng cerpen jomblo bucin, horor, mesum, mesra, ceria, menyedihkan, dll | 
-<img src="./Capture.jpg" width="128" height="128"/>
+
+<img src="capture.jpg" width="128" height="128"/>
 silahkan tambahkan fitur sendiri, capek saya:)
 ## APIKEY REKOMENDASI
 - [VHTEAR](https://api.vhtear.com)
