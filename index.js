@@ -1,6 +1,7 @@
 const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
+var popup = require('popups');
 
 try {
   var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
