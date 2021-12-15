@@ -27,7 +27,7 @@ renderNotes(notes);
 // thanks to Ikhya - viko - zhirr - zeks
 
 // kasih creditsnya kaliii
-const version = 1.2
+const version = 1.4
 var apikey = "rxking" // viko-api.herokuapp.com 
 var apikey_token = "8OoDbSQm"
 
@@ -114,26 +114,61 @@ msgerForm.addEventListener("submit", event => {
     case '#play':
     const hasilny = prompt("masukan keyword pencarian youtube mp3");
      if (hasilny == "null") {
-  appendMessage(BOT_NAME, BOT_IMG, "left", 'Membatalkan');
+  appendMessage("Youtube MP3", BOT_IMG, "left", 'Membatalkan');
          }
     comd = "Silahkan tunggu " + hasilny
-    appendMessage(BOT_NAME, BOT_IMG, "left", comd);
+    appendMessage("Youtube MP3", BOT_IMG, "left", comd);
    fetch(`https://viko-api.herokuapp.com/api/yt/playmp3?query=${hasilny}&apikey=${apikey}`)
    .then(response => response.json())
     .then(data => {
      
       if (data.result == "masukkan parameter query") {
-  appendMessage(BOT_NAME, "left", 'masukan keywordnya kosong');
+  appendMessage("Youtube MP3", "left", 'masukan keywordnya kosong');
          }
         console.log(data)
-   const kuotes = `<img src="${data.thumb}"
+   const kuotes = `
+   <style>
+   h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 330px;
+    }
+   </style>
+   <center>
+   <a class="button" href="#popup3">
+   <img src="${data.thumb}"
      width="300" 
-     height="150"</img><br><br><h4>${data.title}</h4>Channel: ${data.channel}<br>Viewer: ${data.views}<br>Publish: ${data.published}<br><br><iframe scrolling="no" height="50" width="300" src="${data.url}" title="${data.title}"></iframe><br>`
+     height="150"</img></center></a>
+	 <br><br>
+	 <h4>${data.title}</h4><br>
+	 Channel: ${data.channel}<br>
+	 Viewer: ${data.views}<br>
+	 Publish: ${data.published}<br><br>
+	 <audio controls autoplay>
+  <source src="${data.url}" type="audio/ogg">
+  <source src="${data.url}" type="audio/mpeg">
+  Your browser does not support
+     </audio><br>
+	 <div id="popup3" class="overlay">
+    <div class="popup">
+    <center><h3>${data.title}</h3></center><br>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+	<center><img src="${data.thumb}"
+     width="700"
+     height="400"
+	</img>
+	</center>
+    </div>
+  </div>
+</div>
+	 `
   console.log("Sukses tanpa error")
   const msg004 = kuotes;
   const delay004 = msg004.split(" ").length * 100;
   setTimeout(() => {
-    appendMessage(BOT_NAME, BOT_IMG, "left", msg004);
+    appendMessage("Youtube MP3", BOT_IMG, "left", msg004);
   }, delay004);
   if (data.statusCode) {
   appendMessage(BOT_NAME, BOT_IMG, "left", 'Terjadi kesalahan, server tiba tiba menutup laman');
@@ -150,7 +185,7 @@ msgerForm.addEventListener("submit", event => {
      if (urlnya == "null") {
   appendMessage(BOT_NAME, BOT_IMG, "left", 'Membatalkan');
          }
-    comd = "Silahkan tunggu " + urlnya
+    comd = "Silahkan tunggu "
     appendMessage(BOT_NAME, BOT_IMG, "left", comd);
    fetch(`https://hadi-api.herokuapp.com/api/tiktok?url=${urlnya}`)
    .then(response => response.json())
@@ -160,7 +195,13 @@ msgerForm.addEventListener("submit", event => {
   appendMessage(BOT_NAME, "left", 'masukan keywordnya kosong');
          }
         console.log(data)
-   const katese = `<iframe scrolling="no" height="200" width="300" src="${data.result.video.original}" title="micanssbot_tiktok"></iframe><br>
+   const katese = `
+  <center>
+  <video width="420" height="240" controls autoplay>
+  <source src="${data.result.video.original}" type="video/mp4">
+  <source src="${data.result.video.original}" type="video/ogg">
+  Your browser does not support the video tag.
+  </video></center><br>
 <style>
 .asuw {
   background-color: #4CAF50; /* Green */
@@ -174,7 +215,7 @@ msgerForm.addEventListener("submit", event => {
 }
 </style>
 <center><strong>untuk mendownload silahkan pilih dibawah ini</strong></center>
-<center><h5>By Hadi tiktok ${version}</h5></center>
+<center><h5>Tiktok Downloader ${version}</h5></center>
 <br><br>
 <center><a class="asuw" href="${data.result.video.nowm}">
 <lord-icon

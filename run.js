@@ -15,7 +15,8 @@ app.use(express.static("public"))
 app.use('/', mainrouter)
 
 app.listen(PORT, () => {
-    console.log(color("Server running on port " + PORT,'green'))
+    console.log(color("Server berjalan pada port " + PORT,'green'))
+	console.log(color("MICANSS BOT WEB - Viko dwi kurniawan",'yellow'))
 })
 
 module.exports = app

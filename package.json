@@ -1,6 +1,6 @@
 {
   "name": "micanssbotWEB",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "project by viko, sebuah simulasi chat AI bot untuk para orang gabut",
   "main": "run.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vikodk67/studiovdk.git"
+    "url": "git+https://github.com/vikodk67/webchat-API-mican.git"
   },
   "keywords": [
     "micanss",
@@ -17,10 +17,10 @@
     "bot intelegent",
     "web ui chat"
   ],
-  "author": "V",
+  "author": "Viko dwi kurniawan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vikodk67/restAPI/issues"
+    "url": "https://github.com/vikodk67/webchat-API-mican/issues"
   },
   "dependencies": {
     "axios": "^0.21.1",
