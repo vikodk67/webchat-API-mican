@@ -3,6 +3,7 @@ var express = require('express'),
     secure = require('ssl-express-www');
 const PORT = process.env.PORT || 8080 || 5000 || 3000
 var { color } = require('./lib/color.js')
+var popup = require('popups');
 
 var mainrouter = require('./view.js')
 var app = express()
