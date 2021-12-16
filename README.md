@@ -1,5 +1,5 @@
 <h2>webchat-API-mican</h2>
-<p>Versi beta 1.3.0</p><br>
+<p>Versi beta 1.4.0</p><br>
 
 <p align="left">
 <img src="http://studiovdk.herokuapp.com/api/tentang/images/vhekr.gif" alt="GIF" width="170" height="170"/>
