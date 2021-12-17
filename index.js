@@ -13,7 +13,6 @@ catch(e) {
   $('.app').hide();
 }
 
-
 var noteTextarea = $('#note-textarea');
 var instructions = $('#recording-instructions');
 var notesList = $('ul#notes');
@@ -49,6 +48,7 @@ msgerForm.addEventListener("submit", event => {
   const chtar = msgerInput.value
   const args = chtar.trim().split(/ +/).slice(1)
   function botResponse() {
+  
   switch(chtar){
 	  case '#menu':
 	   const botku = `Silahkan klik icon chat pojok kanan atas<br>Version: ${version} BETA<br>
@@ -157,8 +157,8 @@ msgerForm.addEventListener("submit", event => {
     <a class="close" href="#">&times;</a>
     <div class="content">
 	<center><img src="${data.thumb}"
-     width="700"
-     height="400"
+     width="400"
+     height="200"
 	</img>
 	</center>
     </div>
@@ -268,8 +268,14 @@ msgerForm.addEventListener("submit", event => {
     })
     .catch(err => {
      audioer.play();
-     const erorku = `<h4>periksa koneksi internet anda :(</h4> ` + err
-    appendMessage(BOT_NAME, BOT_IMG, "left", erorku);
+      swal({
+    title: "Periksa koneksi internet anda !!",
+    type: "warning",
+    confirmButtonColor: "#33cbf5",
+    reverseButtons: true,
+    focusConfirm: false,
+    focusCancel: true
+  });
     });
 	  break;
   }
@@ -359,7 +365,6 @@ recognition.onerror = function(event) {
     instructions.text('No speech was detected. Try again.');  
   };
 }
-
 
 
 /*-----------------------------

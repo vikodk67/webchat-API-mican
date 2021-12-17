@@ -2,6 +2,8 @@
 <head>
 <title>MICANSCHAT</title>
 <link href="./css/style.css" rel="stylesheet">
+<link href="./css/alert.css" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .container i{
@@ -10,6 +12,7 @@
     </style>
 </head>
 <body>
+
 <style>
 
 .overlay {
@@ -35,7 +38,7 @@
   border-radius: 3px;
   width: 90%;
   position: relative;
-  transition: all 5s ease-in-out;
+  transition: all 3s ease-in-out;
 }
 
 .popup h2 {
@@ -113,6 +116,15 @@
 		</div>
 	</div>
 </div>
+<style>
+.container-alert {
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box
+}
+</style>
 <section class="msger">
   <header class="msger-header">
     <div class="msger-header-title">
@@ -147,6 +159,7 @@
 	<button class="msger-send-btn" id="start-record-btn" title="Start Recording">Vn</button>
   </form>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
 <script src="index.js"></script>
