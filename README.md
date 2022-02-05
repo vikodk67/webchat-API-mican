@@ -7,6 +7,7 @@
 aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajadhsm
 kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu update terbaru
 
+<p href="https://nodejs.org"><strong>Download NODEJS</strong></p>
 ## Instalasinya
 
 ```bash
@@ -20,7 +21,8 @@ kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu upda
 |     Command     |              Feature                                                                         |
 | :-------------: | :------------------------------------------------------------------------------------------: |
 |       #play     | menyetel lagu di webnya anda tinggal ketik #play tanpa tambahan lainnya                      |
-|       #tiktok   | mengdonlot video sumber dari tiktok anda tinggal ketik #tiktok tanpa tambahan lainnya        |
+|       #play4   | ngplay video dari youtube bebas dari iklan                                                    |
+|       #tiktok   | mengdonlot:V video sumber dari tiktok anda tinggal ketik #tiktok tanpa tambahan lainnya      |
 |       #cerpen   | menceritakan kisah dongeng cerpen jomblo bucin, horor, mesum, mesra, ceria, menyedihkan, dll | 
 |       tombol vn   |mengkonversi micropone ke teks pesan akan disampaikan | 
 
