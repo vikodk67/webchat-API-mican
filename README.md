@@ -1,5 +1,5 @@
 <h2>webchat-API-mican</h2>
-<p>Versi beta 1.4.0</p><br>
+<p>Versi beta 1.4.2</p><br>
 
 <p align="left">
 <img src="http://studiovdk.herokuapp.com/api/tentang/images/vhekr.gif" alt="GIF" width="170" height="170"/>
@@ -7,7 +7,7 @@
 aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajadhsm
 kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu update terbaru
 <br>
-<p href="https://nodejs.org"><strong>Download NODEJS</strong></p>
+- [NODEJS](https://nodejs.org)
 ## Instalasinya
 
 ```bash
