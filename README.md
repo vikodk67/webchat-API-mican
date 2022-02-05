@@ -6,7 +6,8 @@
 </p>
 aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajadhsm
 kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu update terbaru
-<br>
+
+
 - [NODEJS](https://nodejs.org)
 ## Instalasinya
 
