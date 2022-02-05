@@ -4,11 +4,11 @@
 <p align="left">
 <img src="http://studiovdk.herokuapp.com/api/tentang/images/vhekr.gif" alt="GIF" width="170" height="170"/>
 </p>
-aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajadhsm
-kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu update terbaru
+<p>aplikasi berbasis web dilengkapi AI intelegent nembak simsimi, template by sajadhsm
+kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu update terbaru</p><br>
 
 
-- [NODEJS](https://nodejs.org)
+- [DOWNLOAD NODEJS](https://nodejs.org)
 ## Instalasinya
 
 ```bash
@@ -17,6 +17,7 @@ kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu upda
 > npm install
 > node run
 ```
+## localhost:8080
 <strong>FITUR:</strong>
 
 |     Command     |              Feature                                                                         |
