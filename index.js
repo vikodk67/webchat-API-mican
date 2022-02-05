@@ -48,7 +48,6 @@ msgerForm.addEventListener("submit", event => {
   const chtar = msgerInput.value
   const args = chtar.trim().split(/ +/).slice(1)
   function botResponse() {
-  
   switch(chtar){
 	  case '#menu':
 	   const botku = `Silahkan klik icon chat pojok kanan atas<br>Version: ${version} BETA<br>
@@ -61,6 +60,37 @@ msgerForm.addEventListener("submit", event => {
     appendMessage(BOT_NAME, BOT_IMG, "left", msg000);
   }, delay000);
 
+	  break;
+	  case '#play4':
+	  pencarian = prompt("Pencarian video dari youtube");
+	 fetch(`https://viko-api.herokuapp.com/api/yt/playmp4?query=${pencarian}&apikey=${apikey}`)
+	 .then(response => response.json())
+    .then(data => {
+        console.log(data)
+  console.log("Sukses tanpa error")
+  msg001 = `<center>
+  <video width="340" height="190" controls autoplay>
+  <source src="${data.url}" type="video/mp4">
+  <source src="${data.url}" type="video/ogg">
+  Your browser does not support the video tag.
+  </video></center>
+	 <br><br>
+	 <h4>${data.title}</h4><br>
+	 Channel: ${data.channel}<br>
+	 Viewer: ${data.views}<br>
+	 Publish: ${data.published}<br><br>`
+  delay001 = msg001.split(" ").length * 100;
+  
+  appendMessage(BOT_NAME, BOT_IMG, "left", "Buffering video...");
+  setTimeout(() => {
+    appendMessage(BOT_NAME, BOT_IMG, "left", msg001);
+  }, delay001);
+
+    })
+    .catch(err => {
+     audioer.play();
+    appendMessage(BOT_NAME, BOT_IMG, "left", err);
+    });
 	  break;
 	  case '#cerpen':
 	 fetch(`https://viko-api.herokuapp.com/api/cerpen/random?apikey=${apikey}`)
@@ -137,10 +167,9 @@ msgerForm.addEventListener("submit", event => {
     }
    </style>
    <center>
-   <a class="button" href="#popup3">
    <img src="${data.thumb}"
      width="300" 
-     height="150"</img></center></a>
+     height="150"</img></center>
 	 <br><br>
 	 <h4>${data.title}</h4><br>
 	 Channel: ${data.channel}<br>
@@ -150,18 +179,7 @@ msgerForm.addEventListener("submit", event => {
   <source src="${data.url}" type="audio/ogg">
   <source src="${data.url}" type="audio/mpeg">
   Your browser does not support
-     </audio><br>
-	 <div id="popup3" class="overlay">
-    <div class="popup">
-    <center><h3>${data.title}</h3></center><br>
-    <a class="close" href="#">&times;</a>
-    <div class="content">
-	<center><img src="${data.thumb}"
-     width="400"
-     height="200"
-	</img>
-	</center>
-    </div>
+     </audio>
   </div>
 </div>
 	 `
@@ -192,57 +210,29 @@ msgerForm.addEventListener("submit", event => {
    .then(response => response.json())
     .then(data => {
      
-      if (urlnya == " ") {
-  appendMessage(BOT_NAME, "left", 'masukan keywordnya kosong');
-         }
+      if (urlnya === undefined) {
+  appendMessage(BOT_NAME, "left", 'masukan URL TIKTOKnya');
+         } else {
         console.log(data)
    const katese = `
   <center>
-  <video width="320" height="150" controls autoplay>
+  <video width="260" height="330" controls autoplay>
   <source src="${data.result.video.original}" type="video/mp4">
   <source src="${data.result.video.original}" type="video/ogg">
   Your browser does not support the video tag.
   </video></center><br>
-<style>
-.asuw {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 3px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 13px;
-}
-</style>
 <center><strong>untuk mendownload silahkan pilih dibawah ini</strong></center>
 <center><h5>Tiktok Downloader ${version}</h5></center>
 <br><br>
-<center><a class="asuw" href="${data.result.video.nowm}">
-<lord-icon
-    src="https://cdn.lordicon.com/tdxypxgp.json"
-    trigger="loop"
-    colors="primary:#9cf4a7,secondary:#30e849"
-    stroke="100"
-    style="width:30px;height:30px">
-</lord-icon>Unduh NoWM</a>
-<a class="asuw" href="${data.result.audio_only.audio1}">
-<lord-icon
-    src="https://cdn.lordicon.com/vieswnpa.json"
-    trigger="loop"
-    colors="primary:#30e849,secondary:#9cf4a7"
-    stroke="96"
-    style="width:30px;height:30px">
-</lord-icon>Unduh MP3</a></center>`
+<center><a class="asuw" href="${data.result.video.nowm}"><strong>NoWM</strong></a>
+<a class="asuw" href="${data.result.audio_only.audio1}"><strong>MP3</strong></a></center>`
   console.log("Sukses tanpa error")
   const msg005 = katese;
   const delay005 = msg005.split(" ").length * 100;
   setTimeout(() => {
     appendMessage(BOT_NAME, BOT_IMG, "left", msg005);
   }, delay005);
-  if (data.statusCode) {
-  appendMessage(BOT_NAME, BOT_IMG, "left", 'Terjadi kesalahan, server tiba tiba menutup laman');
-}
+  }
     })
     .catch(err => {
      audioer.play();
