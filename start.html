@@ -1,21 +1,20 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-<title>MICANSCHAT</title>
-<link href="./css/style.css" rel="stylesheet">
-<link href="./css/alert.css" rel="stylesheet">
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .container i{
+  <title>MICANSCHAT</title>
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/alert.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style> .container i{
             font-size: 1vw;
         }
     </style>
 </head>
+
 <body>
-
-<style>
-
-.overlay {
+  <style> .overlay {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -73,51 +72,30 @@
   }
 }
 </style>
-<div id="popup2" class="overlay">
-<div class="popup">
-    <h3>command features</h3><br>
-    <a class="close" href="#">&times;</a>
-    <div class="content">
-    <strong>New features V1.4.0</strong><br><br>
-	<strong>Command</strong><br>
-    #cerpen<br>
-    #play (ketik #play akan muncul pencarian mp3 dari youtube)<br>
-    #tiktok (ketik #tiktok akan muncul masukan url dari video tiktok)<br>
-	<strong>Fitur</strong><br>
-	- Vn mengkonversi speech ke teks
-	- animasi terbaru
-	- tampilan gambar pop up akan muncul jika diklik
-    <br><br>
+  <div id="popup2" class="overlay">
+    <div class="popup">
+      <h3>command features</h3><br>
+      <a class="close" href="#">×</a>
+      <div class="content">
+        <strong>New features V1.4.2</strong><br><br>
+        <strong>Command</strong><br> #cerpen<br> #play (ketik #play akan muncul pencarian mp3 dari youtube)<br> #tiktok (ketik #tiktok akan muncul masukan url dari video tiktok)<br>
+        <strong>Fitur</strong><br> - Vn mengkonversi speech ke teks - animasi terbaru - tampilan gambar pop up akan muncul jika diklik <br><br>
+      </div>
     </div>
   </div>
-</div>
-<div id="popup1" class="overlay">
-<div class="popup">
-		<h3>About</h3><br>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-		<strong>Micansschat</strong><br>
-		dibuat oleh viko dwi kurniawan<br>
-		aplikasi chat berbasis web dengan menggunakan AI Artificial Intelegent<br>
-		dengan tampilan simple dan menarik
-		<br><br>
-		<strong>Template By</strong><br>
-		Sajad Hashemian
-		<br>
-		<strong>Programer Student</strong><br>
-		Viko dwi kurniawan<br><br>
-		<h2>Thanks to</h2><br>
-		- Zeks API<br>
-		- Zhirr athallah<br>
-		- Vinz<br>
-		- Adiwajshing<br>
-		- Ikhyaaulum<br>
-		- Galuh pawestri
-		</div>
-	</div>
-</div>
-<style>
-.container-alert {
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <h3>About</h3><br>
+      <a class="close" href="#">×</a>
+      <div class="content">
+        <strong>Micansschat</strong><br> dibuat oleh viko dwi kurniawan<br> aplikasi chat berbasis web dengan menggunakan AI Artificial Intelegent<br> dengan tampilan simple dan menarik <br><br>
+        <strong>Template By</strong><br> Sajad Hashemian <br>
+        <strong>Programer Student</strong><br> Viko dwi kurniawan<br><br>
+        <h2>Thanks to</h2><br> - Sajad Hashemian<br> - Zeks API<br> - Zhirr athallah<br> - Vinz<br> - Adiwajshing<br> - Ikhyaaulum<br> - Galuh pawestri
+      </div>
+    </div>
+  </div>
+  <style> .container-alert {
   width: 500px;
   max-width: 100%;
   margin: 0 auto;
@@ -125,43 +103,52 @@
   box-sizing: border-box
 }
 </style>
-<section class="msger">
-  <header class="msger-header">
-    <div class="msger-header-title">
-      <strong>MICANSCHAT</strong>
-    </div>
-    <div class="msger-header-options">
-    <a class="button" href="#popup1">
-	  <img src="./icon/exclamation-circle-solid.png" width="13" height="13" alt="info"></img>
-    </a>&nbsp;
-    <a class="button" href="#popup2">
-    <img src="./icon/chat.png" width="13" height="13" alt="info"></img>
-    </a>&nbsp;
-    </div>
-  </header>
-  <main class="msger-chat">
-    <div class="msg left-msg">
-      <div class="msg-bubble">
-        <div class="msg-info">
-          <div class="msg-info-name">Admin VIKO</div>
-        </div>
-
-        <div class="msg-text">
-          hai coba katakan sesuatu sama micanss sekarang. <strong>beta version</strong>
+<style>
+.asuw {
+  background-color: #e7e7e7;
+  border-radius: 4px;
+  color: #787878;
+  padding: 7px 59px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+}
+</style>
+  <section class="msger">
+    <header class="msger-header bg-info shadow-sm" style="	background-image: url(https://pingendo.com/site-assets/cover.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;	box-shadow: 0px 0px 4px  black;">
+      <div class="msger-header-title">
+        <strong>MICANSCHAT</strong>
+      </div>
+      <div class="msger-header-options">
+        <a class="button" href="#popup1">
+          <img src="./icon/exclamation-circle-solid.png" width="13" height="13" alt="info">
+        </a>&nbsp; <a class="button" href="#popup2">
+          <img src="./icon/chat.png" width="13" height="13" alt="info">
+        </a>&nbsp; </div>
+    </header>
+    <main class="msger-chat text-dark border border-light" style="">
+      <div class="msg left-msg">
+        <div class="msg-bubble shadow-sm">
+          <div class="msg-info">
+            <div class="msg-info-name">Administrator</div>
+          </div>
+          <div class="msg-text" style=""> hai coba katakan sesuatu sama micanss sekarang. bot web dalam masa pengembangan <strong>beta version</strong><br><br>
+		  <center><a class="asuw" href="https://api.whatsapp.com/message/6IUZGPOAXTKUG1?autoload=1&app_absent=0"><strong>Kembali</strong></a>&#160;<a class="asuw" href="wa.me/6281515958390"><strong>Owner Bot</strong></a></center>
+          </div>
         </div>
       </div>
-    </div>
-    </div>
-  </main>
-  <form class="msger-inputarea">
-    <input type="text" class="msger-input" id="note-textarea" placeholder="Kirim pesan">
-    <button type="submit" class="msger-send-btn" id="pause-record-btn">Kirim</button>
-	<button class="msger-send-btn" id="start-record-btn" title="Start Recording">Vn</button>
-  </form>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-<script src="index.js"></script>
+    </main>
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" id="note-textarea" placeholder="Kirim pesan">
+      <button type="submit" class="msger-send-btn" id="pause-record-btn" style="	background-image: url(https://pingendo.com/site-assets/cover.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Kirim</button>
+      <button class="msger-send-btn" id="start-record-btn" title="Start Recording" style="	background-image: url(https://pingendo.com/site-assets/cover.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Vn</button>
+    </form>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+  <script src="index.js"></script>
 </body>
+
 </html>
