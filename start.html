@@ -3,7 +3,8 @@
 
 <head>
   <title>MICANSCHAT</title>
-  <link rel="icon" href="profil.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="./icon/preload.jpg" sizes="16x16" type="image/png">
+  <link href="./css/preload.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/alert.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css">
@@ -73,13 +74,27 @@
   }
 }
 </style>
+<div class="loader-bg">
+<style>
+p.lodeng {
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  width: 140px;
+}
+</style>
+  		<div class="loader-p">
+  		<img class="a" width="70" src="./icon/preload.jpg"></img><br>
+		<strong><p class="lodeng" id="timeoutcog">Loading micanss</p></strong>
+  		</div>
+</div>
   <div id="popup2" class="overlay">
     <div class="popup">
       <h3>command features</h3><br>
       <a class="close" href="#">×</a>
       <div class="content">
         <strong>New features V1.4.2</strong><br><br>
-        <strong>Command</strong><br> #cerpen<br> #play4 (ketik #play akan muncul pencarian dari youtube)<br> #play (ketik #play akan muncul pencarian mp3 dari youtube)<br> #tiktok (ketik #tiktok akan muncul masukan url dari video tiktok)<br>
+        <strong>Command</strong><br> #play4<br> #cerpen<br> #play (ketik #play akan muncul pencarian mp3 dari youtube)<br> #tiktok (ketik #tiktok akan muncul masukan url dari video tiktok)<br>
         <strong>Fitur</strong><br> - Vn mengkonversi speech ke teks - animasi terbaru - tampilan gambar pop up akan muncul jika diklik <br><br>
       </div>
     </div>
@@ -150,6 +165,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
   <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  setTimeout(function(){
+    $('.loader-bg').fadeToggle();
+  },1500);
+	conke = "<center>MicansBOT</center>"
+	document.getElementById('timeoutcog').innerHTML = conke
+  </script>
 </body>
 
 </html>
