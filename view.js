@@ -35,6 +35,9 @@ router.get('/icon/chat.png', (req, res) => {
 router.get('/icon/chat.png', (req, res) => {
     res.sendFile(__path + '/icon/chat.png')
 })
+router.get('/icon/preload.jpg', (req, res) => {
+    res.sendFile(__path + '/icon/preload.jpg')
+})
 
 router.get('/config', (req, res) => {
     config = {
