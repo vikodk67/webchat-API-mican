@@ -23,6 +23,9 @@ router.get('/profil.png', (req, res) => {
 router.get('/css/style.css', (req, res) => {
     res.sendFile(__path + '/css/style.css')
 })
+router.get('/css/preload.css', (req, res) => {
+    res.sendFile(__path + '/css/preload.css')
+})
 router.get('/icon/exclamation-circle-solid.png', (req, res) => {
     res.sendFile(__path + '/icon/exclamation-circle-solid.png')
 })
