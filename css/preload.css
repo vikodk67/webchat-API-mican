@@ -367,3 +367,7 @@ img.a {
   border-radius: 50%;
   animation: spin .5s linear 0s infinite;
 }
+div.heder {
+  max-width: 300px;
+  min-width: 100px;
+}

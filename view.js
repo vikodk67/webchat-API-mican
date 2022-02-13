@@ -1,5 +1,6 @@
 __path = process.cwd()
-
+// MODULE
+const fs = require('fs');
 var express = require('express');
 var router = express.Router();
 
@@ -35,15 +36,27 @@ router.get('/icon/chat.png', (req, res) => {
 router.get('/icon/chat.png', (req, res) => {
     res.sendFile(__path + '/icon/chat.png')
 })
+router.get('/lib/note.js', (req, res) => {
+    res.sendFile(__path + '/lib/note.js')
+})
 router.get('/icon/preload.jpg', (req, res) => {
     res.sendFile(__path + '/icon/preload.jpg')
 })
-
+let data = "hai coba katakan sesuatu sama micanss sekarang. bot web dalam masa pengembangan beta version";
+  
+fs.writeFile("notif.txt", data, (err) => {
+  if (err)
+    console.log(err);
+  else {
+    console.log("NOTIFIKASI DITEMUKAN");
+    console.log(fs.readFileSync("notif.txt", "utf8"));
+  }
+const viko_notif = fs.readFileSync("notif.txt", "utf8");
 router.get('/config', (req, res) => {
     config = {
         status: true,
         result: {
-            prefix : '#',
+            readpiles : viko_notif,
             namabot: 'Micanss WEB',
             namaowner: 'Viko dwi kurniawan',
             instagram: 'vikodwik_rmx',
@@ -52,5 +65,5 @@ router.get('/config', (req, res) => {
     }
     res.json(config)
 })
-
+});
 module.exports = router

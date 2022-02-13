@@ -2,7 +2,6 @@ const msgerForm = get(".msger-inputarea");
 const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
-
 try {
   var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   var recognition = new SpeechRecognition();
@@ -21,6 +20,8 @@ var noteContent = '';
 
 var notes = getAllNotes();
 renderNotes(notes);
+
+
 
 // template made by Sajad Hashemian
 // Javascript by viko menggunakan switch case
@@ -221,7 +222,7 @@ msgerForm.addEventListener("submit", event => {
   <source src="${data.result.video.original}" type="video/ogg">
   Your browser does not support the video tag.
   </video></center><br>
-<center><strong>untuk mendownload silahkan pilih dibawah ini</strong></center>
+<center><strong>untuk mendownload silahkan pilih dibawah. Audio atau Video NoWM</strong></center>
 <center><h5>Tiktok Downloader ${version}</h5></center>
 <br><br>
 <center><a class="asuw" href="${data.result.video.nowm}"><strong>NoWM</strong></a>
@@ -281,6 +282,12 @@ msgerForm.addEventListener("submit", event => {
 function appendMessage(name, img, side, text) {
   //   Simple solution for small apps
   const msgHTML = `
+  <style>
+  div.msg-text {
+  max-width: 400px;
+  min-width: 100px;
+  }
+  </style>
     <div class="msg ${side}-msg">
       <div class="msg-img" style="background-image: url(${img})"></div>
       <div class="msg-bubble">
