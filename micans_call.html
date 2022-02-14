@@ -1,10 +1,28 @@
 <head>
-<title>MicansBOT - CALL METTING</title>
+<title>MICANSCHAT - CALL METTING</title>
 <meta name="viewport" content="width=device-width, initial-scale=0.90, maximum-scale=5.0, minimum-scale=0.69">
 <link rel="icon" href="profil.png" sizes="16x16" type="image/png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css">
+<link href="./css/preload.css" rel="stylesheet">
+<link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
+<div class="loader-bg">
+<style>
+p.lodeng {
+  position: absolute;
+  top: 150px;
+  right: 0px;
+  width: 140px;
+}
+</style>
+<div class="loader-p">
+<img class="a" width="70" src="./icon/preload.jpg"></img><br>
+<strong><p class="lodeng" id="timeoutcog">Loading Micanss</p></strong>
+</div>
+</div>
 <script>
+	
   var script = document.createElement("script");
   script.type = "text/javascript";
 
@@ -76,5 +94,19 @@
     "https://sdk.videosdk.live/rtc-js-prebuilt/0.1.21/rtc-js-prebuilt.js";
   document.getElementsByTagName("head")[0].appendChild(script);
 </script>
+
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  setTimeout(function(){
+    $('.loader-bg').fadeToggle();
+  },1500);
+	conke = "<center>Call metting</center>"
+	document.getElementById('timeoutcog').innerHTML = conke
+  </script>
 </body>
 </html>
