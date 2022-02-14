@@ -5,7 +5,6 @@
   <link rel="icon" href="profil.png" sizes="16x16" type="image/png">
   <link href="./css/preload.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
-  <link href="./css/alert.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=0.90, maximum-scale=5.0, minimum-scale=0.69">
@@ -171,12 +170,21 @@ p.lodeng {
       <button class="msger-send-btn" id="start-record-btn" title="Start Recording"><p class="cokkk" id="recordinginstructions">Vn</p></button>
     </form>
   </section>
+  <!-- INI BAGIAN JAVASCRIPT>
+  <!WOKWOKWOKWOKWOKOWKOWKOKW-->
+  <script type="text/javascript">
+        var alerted = localStorage.getItem('alerted') || '';
+        if (alerted != 'yes') {
+        swal("Informasi", "anda pengunjung baru disini, yuk chatingan sama mican sepuasnya. dan ada fitur seperti bot micans whatsapp. anda belum tau? silahkan klik bantuan atau about di sekitar halaman micanweb");
+         alert("Halo perkenalkan saya mican, yu chatingan sama aku disini");
+         localStorage.setItem('alerted','yes');
+        }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
   <script src="index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="ejs.min.js"></script>
   <script>
   setTimeout(function(){
     $('.loader-bg').fadeToggle();
@@ -185,6 +193,7 @@ p.lodeng {
 	document.getElementById('timeoutcog').innerHTML = conke
   </script>
   <script src="/lib/note.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </body>
 
 </html>

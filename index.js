@@ -40,7 +40,7 @@ const PERSON_NAME = "You";
 var audioer = new Audio("audio/error.wav");
 var audiochat = new Audio("audio/chat-notif.wav");
 var audiorec = new Audio("audio/rec.wav");
-var audioreccancel = new Audio("audio/rec-cancel.wav");
+var audioreccancel = new Audio("audio/rec_cancel.wav");
 // end audio
 
 //panel chatnya
