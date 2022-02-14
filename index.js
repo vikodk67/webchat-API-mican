@@ -21,8 +21,6 @@ var noteContent = '';
 var notes = getAllNotes();
 renderNotes(notes);
 
-
-
 // template made by Sajad Hashemian
 // Javascript by viko menggunakan switch case
 // thanks to Ikhya - viko - zhirr - zeks
@@ -244,6 +242,7 @@ msgerForm.addEventListener("submit", event => {
     });
     break;
 	  default:
+    $(document).one(function() { swal("Informasi", "anda pengunjung baru disini, yuk chatingan sama mican sepuasnya. dan ada fitur seperti bot micans whatsapp. anda belum tau? silahkan klik bantuan atau about di sekitar halaman micanweb");})
 	  fetch(`https://viko-api.herokuapp.com/api/f/simi?apikey=${apikey}&query=${chtar}`)
 	 .then(response => response.json())
     .then(data => {
