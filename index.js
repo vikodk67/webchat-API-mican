@@ -13,7 +13,7 @@ catch(e) {
 }
 
 var noteTextarea = $('#note-textarea');
-var instructions = $('#recording-instructions');
+var instructions = $('#recordinginstructions');
 var notesList = $('ul#notes');
 
 var noteContent = '';
@@ -39,6 +39,8 @@ const PERSON_NAME = "You";
 //audio notifnya
 var audioer = new Audio("audio/error.wav");
 var audiochat = new Audio("audio/chat-notif.wav");
+var audiorec = new Audio("audio/rec.wav");
+var audioreccancel = new Audio("audio/rec-cancel.wav");
 // end audio
 
 //panel chatnya
@@ -350,16 +352,14 @@ recognition.onresult = function(event) {
 };
 
 recognition.onstart = function() { 
-  instructions.text('Voice recognition activated. Try speaking into the microphone.');
-}
-
-recognition.onspeechend = function() {
-  instructions.text('You were quiet for a while so voice recognition turned itself off.');
+  audiorec.play();
+  instructions.html(`  
+    <div class="pulse-bubble pulse-bubble-1"></div>`);
 }
 
 recognition.onerror = function(event) {
   if(event.error == 'no-speech') {
-    instructions.text('No speech was detected. Try again.');  
+    instructions.text('Vn');  
   };
 }
 
@@ -378,7 +378,8 @@ $('#start-record-btn').on('click', function(e) {
 
 $('#pause-record-btn').on('click', function(e) {
   recognition.stop();
-  instructions.text('Voice recognition di berhentikan');
+  audioreccancel.play();
+  instructions.text('Vn');
 });
 
 // Sync the text inside the text area with the noteContent variable.
@@ -410,7 +411,7 @@ $('#save-note-btn').on('click', function(e) {
 notesList.on('click', function(e) {
   e.preventDefault();
   var target = $(e.target);
-
+  audioreccancel.play();
   // Listen to the selected note.
   if(target.hasClass('listen-note')) {
     var content = target.closest('.note').find('.content').text();

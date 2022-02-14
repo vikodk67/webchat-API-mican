@@ -5,11 +5,17 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    res.sendFile(__path + '/start.html')
+    res.render(__path + '/start.ejs')
 })
 // Audio NOTIFICATION
 router.get('/audio/chat-notif.wav', (req, res) => {
     res.sendFile(__path + '/audio/chat-notif.wav')
+})
+router.get('/audio/rec_cancel.wav', (req, res) => {
+    res.sendFile(__path + '/audio/rec_cancel.wav')
+})
+router.get('/audio/rec.wav', (req, res) => {
+    res.sendFile(__path + '/audio/rec.wav')
 })
 router.get('/audio/error.wav', (req, res) => {
     res.sendFile(__path + '/audio/error.wav')
@@ -42,16 +48,16 @@ router.get('/lib/note.js', (req, res) => {
 router.get('/icon/preload.jpg', (req, res) => {
     res.sendFile(__path + '/icon/preload.jpg')
 })
-let data = "hai coba katakan sesuatu sama micanss sekarang. bot web dalam masa pengembangan beta version";
+let data = "Tidak ada pemberitahuan, katakan hay atau mulailah mengobrol dengan mican. ketik #menu untuk lihat fitur";
   
-fs.writeFile("notif.txt", data, (err) => {
+fs.writeFile("./database/notif.txt", data, (err) => {
   if (err)
     console.log(err);
   else {
     console.log("NOTIFIKASI DITEMUKAN");
-    console.log(fs.readFileSync("notif.txt", "utf8"));
+    console.log(fs.readFileSync("./database/notif.txt", "utf8"));
   }
-const viko_notif = fs.readFileSync("notif.txt", "utf8");
+const viko_notif = fs.readFileSync("./database/notif.txt", "utf8");
 router.get('/config', (req, res) => {
     config = {
         status: true,

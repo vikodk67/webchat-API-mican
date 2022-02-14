@@ -23,18 +23,19 @@
     "url": "https://github.com/vikodk67/webchat-API-mican/issues"
   },
   "dependencies": {
-	"fs": "0.0.1-security",
     "axios": "^0.21.1",
-    "sweetalert2": "^11.3.0",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.5",
     "cors": "^2.8.5",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "lodash": "^4.17.20",
     "node-fetch": "^2.6.1",
     "request": "^2.88.2",
     "scrape-yt": "^1.4.8",
     "ssl-express-www": "^3.0.7",
+    "sweetalert2": "^11.3.0",
     "urlencode": "^1.1.0"
   },
   "homepage": "https://github.com/zeeoneofc/api-zeeoneofc#readme"
