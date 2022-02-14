@@ -1,5 +1,5 @@
 __path = process.cwd()
-// MODULE
+// MODULE INDEX
 const fs = require('fs');
 var express = require('express');
 var router = express.Router();
@@ -23,6 +23,9 @@ router.get('/audio/error.wav', (req, res) => {
 // Panel HTML
 router.get('/index.js', (req, res) => {
     res.sendFile(__path + '/index.js')
+})
+router.get('/micans_call.html', (req, res) => {
+    res.sendFile(__path + '/micans_call.html')
 })
 router.get('/profil.png', (req, res) => {
     res.sendFile(__path + '/profil.png')
