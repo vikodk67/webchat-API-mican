@@ -35,8 +35,9 @@
 }
 
 .popup {
-  margin: 40px auto;
-  padding: 60px;
+  z-index: 2;
+  margin: 80px auto;
+  padding: 30px;
   background: #fff;
   border-radius: 3px;
   width: 90%;
@@ -45,6 +46,7 @@
 }
 
 .popup h2 {
+  z-index: 1;
   margin-top: 0;
   color: #333;
   font-family: Tahoma, Arial, sans-serif;
@@ -90,6 +92,7 @@ p.lodeng {
 <strong><p class="lodeng" id="timeoutcog">Loading micanss</p></strong>
 </div>
 </div>
+    <! --- POPUP --->
   <div id="popup2" class="overlay">
     <div class="popup">
       <a class="close" href="#">×</a>
@@ -113,6 +116,25 @@ p.lodeng {
       </div>
     </div>
   </div>
+  <div id="settings" class="overlay">
+    <div class="popup">
+      <h2>Settings</h2><br>
+      <a class="close" href="#">×</a>
+	  <main>
+      <h4>Color Settings</h4><br>
+  Background
+  <input type="color" id="choose-theme-color">
+  Header 
+  <input type="color" id="choose-theme-color1"><br><br>
+   <h4>Audio Popup</h4><br>
+   <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+   </label>
+    </main>
+    </div>
+  </div>
+    <! --- END --->
   <style> .container-alert {
   width: 500px;
   max-width: 100%;
@@ -134,11 +156,14 @@ p.lodeng {
 }
 </style>
   <section class="msger">
-    <header class="msger-header bg-info shadow-sm" style="	background-image: url(https://pingendo.com/site-assets/cover.jpg);	background-position: top left;	background-size: 100%;	background-repeat: repeat;	box-shadow: 0px 0px 4px  black;">
+    <header class="msger-header bg-info shadow-sm" style="background-position: top left;	background-size: 100%;	background-repeat: repeat;">
       <div class="msger-header-title">
         <strong>MICANSCHAT</strong>
       </div>
       <div class="msger-header-options">
+        <a class="button" href="#settings">
+          <i class="fa-solid fa-gear"></i>
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;
         <a class="button" href="#popup1">
           <i class="fa-solid fa-memo-circle-info"></i>
         </a>&nbsp; <a class="button" href="#popup2">
