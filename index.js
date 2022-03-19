@@ -156,8 +156,16 @@ msgerForm.addEventListener("submit", event => {
 	 .then(response => response.json())
     .then(data => {
 	  admin_bot = `
+	  <style>
+   a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 360px;
+    }
+   </style>
 	   <strong>Sukses tinyurl</strong><br>
-	<a>${linkpen} > ${data.result} </a><br><br>
+	<a>> ${data.result} </a><br><br>
 	    <a class="asuw" href="${data.result}">Buka</a>&nbsp;&nbsp;<a class="asuw" href="whatsapp://send?text=${data.result}">Share Whatsapp</a>
 	   `
       console.log("Sukses tanpa error")
