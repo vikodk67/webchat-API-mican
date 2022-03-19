@@ -24,9 +24,6 @@ router.get('/audio/error.wav', (req, res) => {
 router.get('/index.js', (req, res) => {
     res.sendFile(__path + '/index.js')
 })
-router.get('/micans_call.html', (req, res) => {
-    res.sendFile(__path + '/micans_call.html')
-})
 router.get('/profil.png', (req, res) => {
     res.sendFile(__path + '/profil.png')
 })

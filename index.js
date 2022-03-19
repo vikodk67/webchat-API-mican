@@ -31,7 +31,7 @@ var apikey = "rxking" // viko-api.herokuapp.com
 var apikey_token = "8OoDbSQm"
 
 const BOT_IMG = "./profil.png";
-const PERSON_IMG = "http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png";
+const PERSON_IMG = " ";
 const BOT_NAME = "Micanss V" + version;
 const PERSON_NAME = "You";
 //audio notifnya
@@ -64,6 +64,9 @@ msgerForm.addEventListener("submit", event => {
 	  break;
 	  case '#play4':
 	  pencarian = prompt("Pencarian video dari youtube");
+	  if (pencarian === null){
+	  appendMessage("Youtube Play Video", BOT_IMG, "left", 'Membatalkan pencarian');
+	  } else {
 	 fetch(`https://viko-api.herokuapp.com/api/yt/playmp4?query=${pencarian}&apikey=${apikey}`)
 	 .then(response => response.json())
     .then(data => {
@@ -92,6 +95,7 @@ msgerForm.addEventListener("submit", event => {
      audioer.play();
     appendMessage(BOT_NAME, BOT_IMG, "left", err);
     });
+	  }
 	  break;
 	  case '#cerpen':
 	 fetch(`https://viko-api.herokuapp.com/api/cerpen/random?apikey=${apikey}`)
@@ -117,7 +121,7 @@ msgerForm.addEventListener("submit", event => {
 	  break;
 	  case '#admin':
 	  case '#owner':
-	   const admin_bot = `
+	  admin_bot = `
 <style>
 .asuw {
   background-color: #4CAF50; /* Green */
@@ -143,12 +147,39 @@ msgerForm.addEventListener("submit", event => {
   }, delay003);
 
 	  break;
+	  case '#tinyurl':
+	  linkpen = prompt("Masukan link/tautan yang akan dijadikan link pendek");
+	  if (linkpen === null){
+	  appendMessage("Youtube Play Video", BOT_IMG, "left", 'Membatalkan pencarian');
+	  } else {
+		 fetch(`https://viko-api.herokuapp.com/api/short/tinyurl?url=${linkpen}&apikey=${apikey}`)
+	 .then(response => response.json())
+    .then(data => {
+	  admin_bot = `
+	   <strong>Sukses tinyurl</strong><br>
+	<a>${linkpen} > ${data.result} </a><br><br>
+	    <a class="asuw" href="${data.result}">Buka</a>&nbsp;&nbsp;<a class="asuw" href="whatsapp://send?text=${data.result}">Share Whatsapp</a>
+	   `
+      console.log("Sukses tanpa error")
+  const msg003 = admin_bot;
+  const delay003 = msg003.split(" ").length * 100;
+
+  setTimeout(() => {
+    appendMessage(BOT_NAME, BOT_IMG, "left", msg003);
+  }, delay003);
+	}).catch(err => {
+     audioer.play();
+        alert("Kesalahan: " + err)
+    appendMessage(BOT_NAME, BOT_IMG, "left", err);
+    });  
+	  }
+	  break;
     case '#play':
     const hasilny = prompt("masukan keyword pencarian youtube mp3");
-     if (hasilny == "null") {
-  appendMessage("Youtube MP3", BOT_IMG, "left", 'Membatalkan');
-         }
-    comd = "Silahkan tunggu " + hasilny
+     if (hasilny === null) {
+     appendMessage("Youtube Play MP3", BOT_IMG, "left", 'Membatalkan pencarian');
+     } else {
+	comd = "Silahkan tunggu " + hasilny
     appendMessage("Youtube MP3", BOT_IMG, "left", comd);
    fetch(`https://viko-api.herokuapp.com/api/yt/playmp3?query=${hasilny}&apikey=${apikey}`)
    .then(response => response.json())
@@ -199,21 +230,49 @@ msgerForm.addEventListener("submit", event => {
         console.log("Kesalahan: " + err)
     appendMessage(BOT_NAME, BOT_IMG, "left", err);
     });
+	 }
+    break;
+	case '#tiktok_review':
+    urlnya = prompt("masukan URL tiktok yang mau di review");
+     if (urlnya === null) {
+     appendMessage(BOT_NAME, BOT_IMG, "left", 'Membatalkan pencarian');
+         } else {
+			 comd = "Silahkan tunggu "
+    appendMessage(BOT_NAME, BOT_IMG, "left", comd);
+   fetch(`https://www.tiktok.com/oembed?url=${urlnya}`)
+   .then(response => response.json())
+    .then(data => {
+        console.log(data)
+   const katese = `
+    <img src="${data.thumbnail_url}"
+     width="240" 
+     height="400"</img>
+  ${data.html}<br>
+</center><br>Author: ${data.author_name}<h5>${data.title}</h5>`
+  console.log("Sukses tanpa error")
+  const msg005 = katese;
+  const delay005 = msg005.split(" ").length * 100;
+  setTimeout(() => {
+    appendMessage("TIKTOK STALK", BOT_IMG, "left", msg005);
+  }, delay005);
+    })
+    .catch(err => {
+     audioer.play();
+        console.log("Kesalahan: " + err)
+    appendMessage("TIKTOK STALK", BOT_IMG, "left", err);
+    });
+		 }
     break;
 	case '#tiktok':
-    const urlnya = prompt("masukan URL tiktok!!");
-     if (urlnya == "null") {
-  appendMessage(BOT_NAME, BOT_IMG, "left", 'Membatalkan');
-         }
-    comd = "Silahkan tunggu "
+    urlnya = prompt("masukan URL tiktok!!");
+     if (urlnya === null) {
+     appendMessage(BOT_NAME, BOT_IMG, "left", 'Membatalkan pencarian');
+         } else {
+			 comd = "Silahkan tunggu "
     appendMessage(BOT_NAME, BOT_IMG, "left", comd);
    fetch(`https://hadi-api.herokuapp.com/api/tiktok?url=${urlnya}`)
    .then(response => response.json())
     .then(data => {
-     
-      if (urlnya === undefined) {
-  appendMessage(BOT_NAME, "left", 'masukan URL TIKTOKnya');
-         } else {
         console.log(data)
    const katese = `
   <center>
@@ -222,10 +281,9 @@ msgerForm.addEventListener("submit", event => {
   <source src="${data.result.video.original}" type="video/ogg">
   Your browser does not support the video tag.
   </video></center><br>
-<center><strong>untuk mendownload silahkan pilih dibawah. Audio atau Video NoWM</strong></center>
-<center><h5>Tiktok Downloader ${version}</h5></center>
-<br><br>
-<center><a class="asuw" href="${data.result.video.nowm}"><strong>NoWM</strong></a>
+<center><strong>TIKTOK DOWNLOADER</strong></center>
+<br>
+<center><a class="asuw" href="${data.result.video.nowm}"><strong>NoWM</strong></a><br><br>
 <a class="asuw" href="${data.result.audio_only.audio1}"><strong>MP3</strong></a></center>`
   console.log("Sukses tanpa error")
   const msg005 = katese;
@@ -233,13 +291,13 @@ msgerForm.addEventListener("submit", event => {
   setTimeout(() => {
     appendMessage(BOT_NAME, BOT_IMG, "left", msg005);
   }, delay005);
-  }
     })
     .catch(err => {
      audioer.play();
         console.log("Kesalahan: " + err)
     appendMessage(BOT_NAME, BOT_IMG, "left", err);
     });
+		 }
     break;
 	  default:
 	  fetch(`https://viko-api.herokuapp.com/api/f/simi?apikey=${apikey}&query=${chtar}`)
