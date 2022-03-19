@@ -31,7 +31,7 @@ kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu upda
 <img src="Capture1.JPG" width="800" height="600"></img>
 
 ## SOUND FX / NOTIFICATION
-BY FL STUDIO 20
+<p>BY FL STUDIO 20</p><br>
 <img src="Capture3.JPG" width="700" height="400"></img>
 
 ## APIKEY REKOMENDASI
