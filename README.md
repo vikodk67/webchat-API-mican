@@ -30,7 +30,9 @@ kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu upda
 
 <img src="Capture1.JPG" width="800" height="600"></img>
 
-silahkan tambahkan fitur sendiri, capek saya:)
+## SOUND FX / NOTIFICATION
+BY FL STUDIO 20
+<img src="Capture3.JPG" width="800" height="600"></img>
 
 ## APIKEY REKOMENDASI
 - [VHTEAR](https://api.vhtear.com)
