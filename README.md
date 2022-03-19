@@ -28,7 +28,7 @@ kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu upda
 |       #cerpen   | menceritakan kisah dongeng cerpen jomblo bucin, horor, mesum, mesra, ceria, menyedihkan, dll | 
 |       tombol vn   |mengkonversi micropone ke teks pesan akan disampaikan | 
 
-<img src="Capture.JPG" width="800" height="600"></img>
+<img src="Capture1.JPG" width="800" height="600"></img>
 
 silahkan tambahkan fitur sendiri, capek saya:)
 
