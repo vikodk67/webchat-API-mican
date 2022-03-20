@@ -24,9 +24,11 @@ kalo ingin menambahkan fitur silahkan tambahkan sendiri, kalo gabisa tunggu upda
 | :-------------: | :------------------------------------------------------------------------------------------: |
 |       #play     | menyetel lagu di webnya anda tinggal ketik #play tanpa tambahan lainnya                      |
 |       #play4   | ngplay video dari youtube bebas dari iklan                                                    |
+|       #tiktok_review   | review atau stak tiktok lewat link                                                    |
+|       #play4   | ngplay video dari youtube bebas dari iklan                                                    |
 |       #tiktok   | mengdonlot:V video sumber dari tiktok anda tinggal ketik #tiktok tanpa tambahan lainnya      |
 |       #cerpen   | menceritakan kisah dongeng cerpen jomblo bucin, horor, mesum, mesra, ceria, menyedihkan, dll | 
-|       tombol vn   |mengkonversi micropone ke teks pesan akan disampaikan | 
+|       #tinyurl   | tinyurl mengubah link pnjang menjadi pendek | 
 
 <img src="Capture1.JPG" width="800" height="600"></img>
 
