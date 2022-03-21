@@ -32,7 +32,7 @@ body {
   flex-flow: column wrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 990px;
+  max-width: 890px;
   margin: 1px;
   height: calc(100% - 40px);
   border: var(--border);
@@ -55,7 +55,7 @@ body {
   padding: 5px;
 }
 .msger-chat::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 .msger-chat::-webkit-scrollbar-track {
   background: #ddd;
