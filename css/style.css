@@ -55,7 +55,7 @@ body {
   padding: 5px;
 }
 .msger-chat::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
 }
 .msger-chat::-webkit-scrollbar-track {
   background: #ddd;
