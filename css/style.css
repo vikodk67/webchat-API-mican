@@ -32,7 +32,7 @@ body {
   flex-flow: column wrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 867px;
+  max-width: 667px;
   margin: 25px 10px;
   height: calc(100% - 50px);
   border: var(--border);
@@ -242,17 +242,24 @@ input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+input:ont-size: 1.2em;
 }
 
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
+main {
+  margin-top: 3em;
 }
 
-.slider.round:before {
-  border-radius: 50%;
+header {
+  h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2em;
+  }
+
+  p {
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
 }
