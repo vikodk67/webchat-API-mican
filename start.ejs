@@ -11,10 +11,11 @@
   <meta name="description" content="Micansbot temen virtual chat berbasis web, seperti simsimi. Dan ada fitur menarik">
   <meta name="author" content="VIKO">
   <meta name="keywords" content="micanweb, micanbot, micanss bot, vikoAPI, vikodwik_rmx">
-  <style> .container i{
+  <style> 
+  .container i{
             font-size: 1vw;
         }
-    </style>
+  </style>
 </head>
 
 <body>
@@ -99,7 +100,13 @@ p.lodeng {
       <div class="content">
         <strong>New features V1.4.3</strong><br><br>
         <strong>Command</strong><br> #play4<br> #cerpen<br> #play<br> #tiktok<br> #tiktok_review<br> #tinyurl<br><br>
-		<p id="screenpop"></p>
+		<p id="screenpop">
+		<div class="pulse-container">  
+    <div class="pulse-bubble pulse-bubble-1"></div>
+    <div class="pulse-bubble pulse-bubble-2"></div>
+    <div class="pulse-bubble pulse-bubble-3"></div>
+        </div>
+		</p>
       </div>
     </div>
   </div>
@@ -204,6 +211,9 @@ p.lodeng {
   <script src="index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
+  setTimeout(function(){
+    $('.pulse-container').fadeToggle();
+  },1100);
   setTimeout(function(){
     $('.loader-bg').fadeToggle();
   },900);

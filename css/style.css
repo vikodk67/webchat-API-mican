@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 70vh;
   background-image: var(--body-bg);
   font-family: Helvetica, sans-serif;
 }
@@ -33,8 +33,8 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 850px;
-  margin: auto;
-  height: calc(100% - 50px);
+  margin: 25px 25px;
+  height: calc(100% - 40px);
   border: var(--border);
   border-radius: 5px;
   background: var(--msger-bg);
@@ -44,7 +44,7 @@ body {
 .msger-header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
   border-bottom: var(--border);
   background: #08cc9e;
   color: white;
