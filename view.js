@@ -48,7 +48,7 @@ router.get('/lib/note.js', (req, res) => {
 router.get('/icon/preload.jpg', (req, res) => {
     res.sendFile(__path + '/icon/preload.jpg')
 })
-let data = "Tidak ada pemberitahuan, katakan hay atau mulailah mengobrol dengan mican. ketik #menu untuk lihat fitur";
+let data = "puasanya gimana kak?, yuk nunggu buka puasa main mican dulu:3";
   
 fs.writeFile("./database/notif.txt", data, (err) => {
   if (err)
