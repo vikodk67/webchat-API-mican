@@ -90,7 +90,7 @@ p.lodeng {
 </style>
 <div class="loader-p">
 <img class="a" width="70" src="./icon/preload.jpg"></img><br>
-<strong><p class="lodeng" id="timeoutcog">Loading micanss</p></strong>
+<strong><p class="lodeng" id="timeoutcog">Load files..</p></strong>
 </div>
 </div>
     <! --- POPUP --->
@@ -99,7 +99,7 @@ p.lodeng {
       <a class="close" href="#">×</a>
       <div class="content">
         <strong>New features V1.4.3</strong><br><br>
-        <strong>Command</strong><br> #play4<br> #cerpen<br> #play<br> #tiktok<br> #tiktok_review<br> #tinyurl<br><br>
+        <strong>Command</strong><br> #play4<br> #brainly<br> #play<br> #tiktok<br> #tiktok_review<br> #tinyurl<br><br>
 		<p id="screenpop">
 		<div class="pulse-container">  
     <div class="pulse-bubble pulse-bubble-1"></div>
@@ -107,6 +107,19 @@ p.lodeng {
     <div class="pulse-bubble pulse-bubble-3"></div>
         </div>
 		</p>
+      </div>
+    </div>
+  </div>
+    <div id="about" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">×</a>
+      <div class="content">
+        <h3><strong>Welcome back</strong></h3><br>
+          mican salah satu bot peladen simple untuk memudahkan kita dalam melakukan hal sesuatu. dilengkapi artificial intelegent SIMSIMI API<br>
+          <br><strong>Keamanan privasi</strong><br>
+          kami membutuhkan perizinan dari anda. untuk mencegahnya kasus pencurian data pribadi.<br><br>
+          <button class="buttonmodal" onclick="findMe()">lokasi</button><br><br>
+          <div id="out"></div>
       </div>
     </div>
   </div>
@@ -132,11 +145,20 @@ p.lodeng {
   <input type="color" id="choose-theme-color">
   Header 
   <input type="color" id="choose-theme-color1"><br><br>
-   <h4>Audio Popup</h4><br>
-   <label class="switch">
-  <input type="checkbox">
-  <span class="slider round"></span>
-   </label>
+  <strong>Background chat</strong>
+  <br><br>
+<fieldset>
+  <legend>Custom image</legend>
+    
+  <label class='__lk-fileInput'>
+      <br>
+    <span data-default='Choose file'>Pilih</span>
+    <input type="file">
+  </label>
+  
+  
+</fieldset>
+  <br>
     </main>
     </div>
   </div>
@@ -164,8 +186,10 @@ p.lodeng {
   <section class="msger">
     <header class="msger-header bg-info shadow-sm" style="background-position: top left;	background-size: 100%;	background-repeat: repeat;">
       <div class="msger-header-title">
-        <strong>MICANSCHAT</strong>
+          <div class="msg-img" style="background-image: url(profil.png)"> 
       </div>
+      </div>
+        <strong class="header">MICANSCHAT</strong>
       <div class="msger-header-options">
         <a class="button" href="#settings">
           <i class="fa-solid fa-gear"></i>
@@ -190,14 +214,14 @@ p.lodeng {
     <div class="pulse-bubble pulse-bubble-3"></div>
         </div>
 		  </div><br>
-		  <center><a class="asuw" href="https://wa.me/6281515958390"><strong>Owner Bot</strong></a></center>
+		  <center><a class="asuw" href="https://wa.me/message/6IUZGPOAXTKUG1"><strong>BOT MICAN</strong></a></center>
           </div>
         </div>
       </div>
     </main>
     <form class="msger-inputarea">
       <input autocomplete="off" type="text" class="msger-input" id="note-textarea" placeholder="Kirim pesan">
-      <button type="submit" class="msger-send-btn" id="pause-record-btn"><i style="font-size: 20px;" class="fa-solid fa-paper-plane-top"></i></button>
+      <button type="submit" onclick="findMe()" class="msger-send-btn" id="pause-record-btn"><i style="font-size: 20px;" class="fa-solid fa-paper-plane-top"></i></button>
       <button class="msger-send-btn" id="start-record-btn" title="Start Recording"><p class="cokkk" id="recordinginstructions">Vn</p></button>
     </form>
   </section>
@@ -221,6 +245,8 @@ p.lodeng {
 	document.getElementById('timeoutcog').innerHTML = conke
   </script>
   <script src="/lib/note.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div></div>
 </body>
 
 </html>

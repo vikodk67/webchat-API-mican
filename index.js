@@ -31,8 +31,8 @@ var apikey = "rxking" // viko-api.herokuapp.com
 var apikey_token = "8OoDbSQm"
 
 const BOT_IMG = "./profil.png";
-const PERSON_IMG = " ";
-const BOT_NAME = "Micanss V" + version;
+const PERSON_IMG = "./profil.png";
+const BOT_NAME = "Micanss"
 const PERSON_NAME = "You";
 //audio notifnya
 var audioer = new Audio("audio/error.wav");
@@ -73,7 +73,7 @@ msgerForm.addEventListener("submit", event => {
         console.log(data)
   console.log("Sukses tanpa error")
   msg001 = `<center>
-  <video width="340" height="190" controls autoplay>
+  <video width="100%" height="190" controls autoplay>
   <source src="${data.url}" type="video/mp4">
   <source src="${data.url}" type="video/ogg">
   Your browser does not support the video tag.
@@ -97,27 +97,68 @@ msgerForm.addEventListener("submit", event => {
     });
 	  }
 	  break;
-	  case '#cerpen':
-	 fetch(`https://viko-api.herokuapp.com/api/cerpen/random?apikey=${apikey}`)
+	  case '#brainly':
+          pencarian = prompt("Brainly pencarian");
+        if (pencarian === null){
+	  appendMessage("Brainly", BOT_IMG, "left", 'Membatalkan pencarian');
+	  } else {
+	 fetch(`/api/brainly?query=`+ pencarian)
 	 .then(response => response.json())
     .then(data => {
+        if(data.respon.statusCode === 503){
+            Swal({
+  icon: 'error',
+  title: '503',
+  text: 'Server sedang sibuk!!',
+  footer: '<a href="https://github.com/vikodk67/webchat-API-mican/issues">Laporkan issue</a>'
+        })
+        } else {
+            console.log(true)
+        }
+        if(data.respon.data[0].jawaban[0].media[0]){
+         media = `
+<style>
+.center-cropped {
+  width: 100%;
+  height: 160px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+</style>
+    <center>
+         <a href="${data.respon.data[0].jawaban[0].media[0]}">
+<div class="center-cropped" 
+     style="background-image: url('${data.respon.data[0].jawaban[0].media[0]}');">
+</div>
+         </a></center>`
+        appendMessage(BOT_NAME, BOT_IMG, "left", media);
+    }
         console.log(data)
-   const mainmenu = data.result
+    mainmenu = `<strong>${data.respon.data[0].pertanyaan}</strong><br><br>
+    <h4>Hasil jawaban</h4><br>
+    <strong>1.</strong> ${data.respon.data[0].jawaban[0].text}<br><br>
+    <strong>2.</strong> ${data.respon.data[1].jawaban[0].text}<br><br>
+    <strong>3.</strong> ${data.respon.data[2].jawaban[0].text}<br>`
   console.log("Sukses tanpa error")
-  const msg001 = mainmenu;
-  const delay001 = msg001.split(" ").length * 100;
-  const loading = "Loading, tunggu beberapa menit untuk mencari berkas di perpustakaan"
+  const msg021 = mainmenu;
+  const delay021 = msg021.split(" ").length * 100;
+  loading = "Loading, silahkan tunggu beberapa saat..."
+    
+       
   appendMessage(BOT_NAME, BOT_IMG, "left", loading);
   setTimeout(() => {
-    appendMessage(BOT_NAME, BOT_IMG, "left", msg001);
-  }, delay001);
+    appendMessage("<h4>Brainly</h4>", BOT_IMG, "left", msg021);
+  }, delay021);
 
     })
     .catch(err => {
      audioer.play();
-        alert("Kesalahan saat mencari cerita pendek: " + err)
+        if (err){
+            swal("Brainly", "Kesalahan jaringan, silahkan refresh halaman");
+        }
     appendMessage(BOT_NAME, BOT_IMG, "left", err);
     });
+      }
 	  break;
 	  case '#admin':
 	  case '#owner':
@@ -208,21 +249,22 @@ msgerForm.addEventListener("submit", event => {
    </style>
    <center>
    <img src="${data.thumb}"
-     width="300" 
+     width="250px" 
      height="150"</img></center>
 	 <br><br>
 	 <h4>${data.title}</h4><br>
 	 Channel: ${data.channel}<br>
 	 Viewer: ${data.views}<br>
 	 Publish: ${data.published}<br><br>
-	 <audio controls autoplay>
+	 <audio class="audioPlayer" controls autoplay>
   <source src="${data.url}" type="audio/ogg">
   <source src="${data.url}" type="audio/mpeg">
   Your browser does not support
      </audio>
   </div>
 </div>
-	 `
+	 
+`
   console.log("Sukses tanpa error")
   const msg004 = kuotes;
   const delay004 = msg004.split(" ").length * 100;
@@ -254,7 +296,7 @@ msgerForm.addEventListener("submit", event => {
    const katese = `
     <img src="${data.thumbnail_url}"
      width="240" 
-     height="400"</img>
+     height="400"></img>
   ${data.html}<br>
 </center><br>Author: ${data.author_name}<h5>${data.title}</h5>`
   console.log("Sukses tanpa error")
@@ -308,7 +350,7 @@ msgerForm.addEventListener("submit", event => {
 		 }
     break;
 	  default:
-	  fetch(`https://viko-api.herokuapp.com/api/f/simi?apikey=${apikey}&query=${chtar}`)
+          fetch(`https://viko-api.herokuapp.com/api/f/simi?apikey=${apikey}&query=${chtar}`)
 	 .then(response => response.json())
     .then(data => {
         console.log(data)
@@ -355,7 +397,6 @@ function appendMessage(name, img, side, text) {
   }
   </style>
     <div class="msg ${side}-msg">
-      <div class="msg-img" style="background-image: url(${img})"></div>
       <div class="msg-bubble">
         <div class="msg-info">
           <div class="msg-info-name">${name}</div>
